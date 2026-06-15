@@ -11,4 +11,8 @@ If the program detects 4 aruco markers, it sets them as the game borders and the
 
 You can now use ur finger to pop the targets and increase your score
 
+Try to only expose the Hand you want to play with to the camera image,
+
+as otherwise the wrong hand might get recognised by the handtracking
+
 The finger detection is implemented using googles mediapipe hand landmarks detection

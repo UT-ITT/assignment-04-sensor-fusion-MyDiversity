@@ -5,7 +5,6 @@ import pyglet
 import math
 import time
 import random
-import mediapipe as mp
 from pathlib import Path
 
 from mediapipe.tasks import python
