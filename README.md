@@ -13,6 +13,8 @@ You can now use ur finger to pop the targets and increase your score
 
 Try to only expose the Hand you want to play with to the camera image,
 
-as otherwise the wrong hand might get recognised by the handtracking
+as otherwise the wrong hand might get recognised by the handtracking.
+
+If the Hand does not get recognised, it might help to get it out of the camera frame and back in again.
 
 The finger detection is implemented using googles mediapipe hand landmarks detection
