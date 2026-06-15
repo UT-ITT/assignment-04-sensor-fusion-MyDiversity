@@ -1,6 +1,16 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/AktWbCri)
 # assignment-04-CV-Sensor-Fusion
 
+# Perspective transformation
+
+After starting the program you have to enter the Path to an image you want to display
+
+After opening the Image, you can select 4 points, the region inside the points gets displayed.
+
+You can now either press "esc" to cancel the selection and return to the full image, or
+
+Press "s" to save the image. After pressing "s" you have to select the Path where the image will be stored and the desired resolution.
+
 # AR Game
 
 To play the game you require a Sheet of paper with 4 Aruco markers (one in each corner)
@@ -22,7 +32,9 @@ The finger detection is implemented using googles mediapipe hand landmarks detec
 # Sensor fusion
 
 The implementation starts with the recognision of the board using 4 aruco markers, afterwards aruco marker 5 gets
-recognised and its position is displayed with a red dot. Simultaneously the DIPPID data gets extracted, where the gravity is subtracted from the acceleration to only get the dynamic acceleration without gravity. Using this dynamic acceleration, a position prediction is calculated and mixed with the actual marker position, it is depicted as a green dot.
+recognised and its position is displayed with a red dot.
+
+Simultaneously the DIPPID data gets extracted, where the gravity is subtracted from the acceleration to only get the dynamic acceleration without gravity. Using this dynamic acceleration, a position prediction is calculated and mixed with the actual marker position, it is depicted as a green dot.
 
 Using the left/right arrow keys, the alpha value can be adjusted. It determines the blend between prediction and actual marker position. A higher alpha value gives more weight to the prediction which smoothens the trajectory of the green dot and makes it more resistant to noise, but slower to follow sudden motion of the marker/red dot.
 Lowering alpha results in a sharper trajectory, following the marker faster but making the prediction more sensitive to noise.
