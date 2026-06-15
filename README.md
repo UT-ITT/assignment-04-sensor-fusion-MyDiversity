@@ -18,3 +18,13 @@ as otherwise the wrong hand might get recognised by the handtracking.
 If the Hand does not get recognised, it might help to get it out of the camera frame and back in again.
 
 The finger detection is implemented using googles mediapipe hand landmarks detection
+
+# Sensor fusion
+
+The implementation starts with the recognision of the board using 4 aruco markers, afterwards aruco marker 5 gets
+recognised and its position is displayed with a red dot. Simultaneously the DIPPID data gets extracted, where the gravity is subtracted from the acceleration to only get the dynamic acceleration without gravity. Using this dynamic acceleration, a position prediction is calculated and mixed with the actual marker position, it is depicted as a green dot.
+
+Using the left/right arrow keys, the alpha value can be adjusted. It determines the blend between prediction and actual marker position. A higher alpha value gives more weight to the prediction which smoothens the trajectory of the green dot and makes it more resistant to noise, but slower to follow sudden motion of the marker/red dot.
+Lowering alpha results in a sharper trajectory, following the marker faster but making the prediction more sensitive to noise.
+
+Button_1 can be used to reset the prediction to the actual marker position in case the prediction drifts too far
