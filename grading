@@ -1,0 +1,36 @@
+# MyDiversity (14.5/20P)
+
+## 1. Perspective Transformation (2.5/5P)
+* The image is successfully loaded and displayed 
+    * yep (1P)
+* Selecting the corner points works and there is visual feedback for the user 
+    * yep (1P) 
+* Perspective transformation to the target resolution works 
+    * nopes (0P)
+* Command line parameters and shortcuts work 
+    * command line parameters don't work (0.5P) 
+
+## 2. AR Game (8.5/10P)
+* The region of interest is detected, extracted, transformed, and displayed 
+    * yep (2P)
+* Objects (such as fingers) in the region of interest are tracked reliably and interaction with game objects work 
+    * it should have been done with opencv for tracking, but we will let that slide
+    * only finger inside region of interest should be tracked (3P)
+* Game mechanics work 
+    * yep (2P)
+* Performance and latency is ok 
+    * yep (1P)
+* The program does not crash 
+    * path didn't work (0.5P)
+
+## 3. Sensor Fusion (3.5/5P)
+* The moving marker is tracked, and its position is displayed in the pyglet window 
+    * yep (1P)
+* Accelerometer data is received from DIPPID and integrated over time 
+    * multiplying dt 4 times is not the right way (0.5P)
+* The complementary filter blends camera and accelerometer data and the prediction is displayed in the pyglet window 
+    * formula not correct (0.5P)
+* The filter weight alpha can be adjusted at runtime, and the prediction can be reset using DIPPID 
+    * alpha should be clipped to max 1 (0.5P)
+* Write a short paragraph reflecting on the implementation and how different weights affect the prediction 
+    * yep (1P)
